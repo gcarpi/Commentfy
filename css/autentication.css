@@ -1,0 +1,101 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body, html {
+  width: 90%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #121721 0%, #000000 100%) fixed;
+}
+
+.brand {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #f9f9f9;
+}
+
+.brand img {
+  width: 50px;
+  height: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  text-align: center;
+  width: 500px;
+  margin-left: 20px;
+  margin-top: 20px;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.login {
+  background-color: rgba(73, 177, 229, 0.9);
+}
+
+.register {
+  background-color: rgba(133, 229, 176, 0.9);
+}
+
+section h3 {
+  color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+label {
+  color: #F9F9F9;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  display: inline-block;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 20px;
+  width: 83%;
+}
+
+
+.btn-login,
+.btn-register {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  padding: 5px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 1s;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #f9f9f9;
+}
