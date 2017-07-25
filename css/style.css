@@ -1,0 +1,262 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+  color: #1F2833;
+}
+
+ul, li {
+  list-style: none;
+}
+
+
+/* All page style  */
+
+body {
+  width: 70%;
+  background-color: #F9F9F9;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Buttons */
+
+.reply,
+.login,
+.register,
+.sendComment,
+.sendReply {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  color: #9b9b9b;
+  padding: 5px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 1s;
+  border: 1px solid #9b9b9b;
+  cursor: pointer;
+}
+
+.reply:hover {
+  color: #F9F9F9;
+  background: #9b9b9b;
+}
+
+.login {
+  color: #F9F9F9;
+  background: #85BFF2;
+  border: none;
+}
+
+.register {
+  margin-left: 10px;
+  color: #F9F9F9;
+  background: #8eccaa;
+  border: none;
+}
+
+.register:hover {
+  background: #8eccaa;
+}
+
+.sendComment, .sendReply {
+  color: #85BFF2;
+  background-color: transparent;
+  border: 1px solid #85BFF2;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.sendReply {
+  margin-right: 1%;
+}
+
+/* Autentication */
+
+.autentication {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.autentication span {
+  margin-right: 20px;
+}
+
+/* Leave a comment */
+
+.leave-a-comment h3 {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.count-comments {
+  margin-right: 5px;
+  color: #1F2853;
+  font-family: sans-serif;
+  font-size: 0.97em;
+}
+
+.leave-a-comment .comment {
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  resize: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  transition: 1s linear;
+  outline: none;
+}
+
+.message-comment {
+  color: green;
+}
+
+/* Principal Content */
+
+.content {
+  margin-top: 30px;
+  position: relative;
+}
+
+.content > h3 {
+  display: inline-block;
+  position: relative;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.img-faq {
+  float: left;
+  margin-bottom: 30px;
+}
+
+/* Comments */
+
+article {
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.new-comment {
+  box-shadow: none;
+  transition: 0.3s;
+  padding: 0;
+}
+
+article img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+}
+
+.user {
+  display: inline-block;
+  position: relative;
+  margin-left: 15px;
+  top: 25px;
+}
+
+.user-text {
+  color: #85BFF2;
+  font-weight: 500;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+.user-text:hover {
+  text-decoration: underline;
+}
+
+.comment-text {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 1.6em;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+/* Reply a Comment */
+
+.reply-a-comment {
+  margin-top: 50px;
+  height: 100px;
+}
+
+/*
+.response i {
+  margin-left: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.liked {
+  color: #FF0000;
+}*/
+
+.reply-comment {
+  width: 99%;
+  display: inline-block;
+  padding: 5px;
+  height: 50px;
+  resize: vertical;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.reply-comment .comment:focus {
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 100%;
+    font-size: 0.9em;
+  }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 90%;
+    font-size: 0.9em;
+  }
+  .autentication span {
+    display: none;
+  }
+}

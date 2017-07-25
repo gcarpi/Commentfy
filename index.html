@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Commentfy</title>
+  <link rel="icon" href="img/FAQ.png">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Autentication -->
+  <div class="autentication">
+    <span>Hey, do you want to say your name?</span>
+    <a href="#" class="login">Login</a>
+    <a href="#" class="register">Register</a>
+  </div>
+
+  <!-- Leave a comment -->
+  <div class="leave-a-comment">
+
+    <h3>Discussion</h3>
+
+    <textarea class="comment" rows="8" cols="80" placeholder="Your comment here"></textarea>
+    <a class="sendComment">Send</a>
+
+    <span class="message-comment"></span>
+
+  </div>
+
+  <!-- Principal Content -->
+  <section class="content">
+
+    <img class="img-faq" src="img/FAQ.png" alt="Logo do FAQ">
+    <h3><span class="count-comments">2</span>comments</h3>
+
+    <!-- Comments -->
+    <div class="comments">
+
+      <article>
+
+        <img class="img-user" src="img/rick.png" alt="Foto de Rick">
+        <h4 class="user">I'm Rick</h4>
+
+        <p class="comment-text">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+
+        <!-- Reply a Comment -->
+        <div class="response">
+
+          <a class="reply">Reply</a>
+
+          <div class="reply-a-comment hidden">
+            <textarea class="reply-comment" rows="8" cols="80" placeholder="Reply this comment"></textarea>
+            <a class="sendReply">Send</a>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article>
+
+        <img class="img-user" src="img/morty.png" alt="Foto de Morty">
+        <h4 class="user">I'm Morty</h4>
+
+        <p class="comment-text">Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sofreu algum tipo de alteração, seja por inserção de passagens com humor, ou palavras aleatórias que não parecem nem um pouco convincentes.</p>
+
+        <div class="response">
+
+          <a class="reply">Reply</a>
+
+          <div class="reply-a-comment hidden">
+            <textarea class="reply-comment" rows="8" cols="80" placeholder="Reply this comment"></textarea>
+            <a class="sendReply">Send</a>
+          </div>
+
+        </div>
+
+      </article>
+    </div>
+
+
+  </section>
+
+  <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script src="js/comments.js" charset="utf-8"></script>
+</body>
+
+</html>
