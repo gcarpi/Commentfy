@@ -213,11 +213,18 @@ article img {
   margin-left: 20px;
   margin-right: 5px;
   cursor: pointer;
-  transition: .5s;
+  transition: 1s linear;
+  color: #1F2833;
 }
 
 .like {
-  color: #159E53;
+  color: #159E53 !important;
+}
+
+.count {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9em;
+  color: #1F2833;
 }
 
 
