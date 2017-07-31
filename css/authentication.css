@@ -11,6 +11,17 @@ ul, li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* End Reset */
+
+
+/* Page styles */
+
 body, html {
   width: 90%;
   margin: 0 auto;
@@ -55,7 +66,7 @@ section {
   background-color: rgba(133, 229, 176, 0.9);
 }
 
-section h3 {
+section h2 {
   color: #f9f9f9;
   margin-bottom: 20px;
 }
@@ -66,13 +77,11 @@ label {
   margin-bottom: 5px;
 }
 
-
 form {
   margin-top: 20px;
 }
 
 input {
-  display: inline-block;
   height: 30px;
   padding: 5px;
   border: none;
@@ -82,20 +91,18 @@ input {
   width: 83%;
 }
 
-
-.btn-login,
-.btn-register {
-  display: inline-block;
-  text-decoration: none;
+.btn {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
   padding: 5px;
-  width: 80px;
+  width: 100px;
+  font-weight: 600;
   height: 30px;
   border-radius: 5px;
   text-align: center;
-  transition: 1s;
+  transition: .5s linear;
   cursor: pointer;
   border: 1px solid #fff;
   color: #f9f9f9;
+  background-color: transparent;
 }
