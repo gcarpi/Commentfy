@@ -4,6 +4,8 @@ $(function() {
   $(document).on("click", ".sendComment", enviarComentario);
   $(document).on("click", ".sendReply", enviarReply);
   $(document).on("click", ".reply", replyAtivado);
+  $(document).on("click", ".fa-thumbs-up", likeComentario);
+
   $(document).change(contadorComentarios);
 });
 
@@ -69,6 +71,7 @@ function montarComentario(user, texto) {
               <div class="response">
 
               <a class="reply">Reply</a>
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="count">0</span>
 
               <div class="reply-a-comment hidden">
                 <textarea class="reply-comment" rows="8" cols="80" placeholder="Reply this comment"></textarea>
@@ -120,27 +123,19 @@ jQuery.fn.extend({
   }
 });
 
-// Implementation of the like and dislike function //
 
-/*$(document).on("click", ".liked", likeFunction);
-$(document).on("click", ".disliked", dislikeFunction);*/
+function likeComentario() {
 
-/*
-function likeFunction() {
+  var contador = $(this).siblings('.count');
+  var totalLikes = contador.text();
 
-    var likedCount = $(this).siblings('.likedCount');
-
-    $(likedCount).text(function(i, val) {
-      return val * 1 + 1;
-    });
+  if ($(this).hasClass('like')) {
+    totalLikes = parseInt(--totalLikes);
+    $(contador).text(totalLikes);
+    $(this).removeClass('like');
+  } else {
+    totalLikes = parseInt(++totalLikes);
+    $(contador).text(totalLikes);
+    $(this).addClass('like');
+  }
 }
-
-function dislikeFunction() {
-
-  var dislikedCount = $(this).siblings('.dislikedCount');
-
-    $(dislikedCount).text(function(i, val) {
-      return val * 1 + 1;
-  });
-
-}*/

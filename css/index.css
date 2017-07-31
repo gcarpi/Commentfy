@@ -209,7 +209,6 @@ article img {
   height: 100px;
 }
 
-/*
 .response i {
   margin-left: 20px;
   margin-right: 5px;
@@ -217,9 +216,10 @@ article img {
   transition: .5s;
 }
 
-.liked {
-  color: #FF0000;
-}*/
+.like {
+  color: #159E53;
+}
+
 
 .reply-comment {
   width: 99%;
