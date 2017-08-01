@@ -9,22 +9,14 @@ $(function() {
   $(document).change(contadorComentarios);
 });
 
-//countComments
-function contadorComentarios() {
-
-  var total = document.getElementsByTagName('article').length;
-  $('.count-comments').text(total + 1);
-}
-
-
-//sendComment
+//send comment
 function enviarComentario() {
 
   var comentario = $('.comment').val();
   var localComentario = $('.comments');
   var user = "";
 
-  if (!comentario.length == 0) {
+  if (!isWhitespaceNotEmpty(comentario)) {
 
     localComentario.prepend(montarComentario(user, comentario));
     $('.comment').val('');
@@ -34,7 +26,7 @@ function enviarComentario() {
   }
 }
 
-//sendReply
+//send reply
 function enviarReply() {
 
   var replyTexto = $(this).parent().parent().find('.reply-comment').val();
@@ -43,7 +35,7 @@ function enviarReply() {
 
   $(this).parent(".reply-a-comment").slideToggle('hidden');
 
-  if (!replyTexto.length == 0) {
+  if (!isWhitespaceNotEmpty(replyTexto)) {
 
     localReply.append(montarComentario(user, replyTexto));
     localReply.find('.reply-comment').val('');
@@ -51,14 +43,14 @@ function enviarReply() {
   }
 }
 
-//EnabledReply
+//enabled reply
 function replyAtivado() {
 
   var localReply = $(this).siblings(".reply-a-comment").slideToggle('hidden');
 
 }
 
-//Create a new comment or reply
+//create a new comment or reply
 function montarComentario(user, texto) {
 
   return `<article>
@@ -84,7 +76,7 @@ function montarComentario(user, texto) {
 
 }
 
-//Receive a message to display on the screen
+//receive a message to display on the screen
 function Mensagem(mensagem) {
 
   var setMensagem = $('.message-comment').text(mensagem);
@@ -97,7 +89,7 @@ function Mensagem(mensagem) {
 
 }
 
-//TextArea autoHeight
+//textArea auto height
 jQuery.fn.extend({
 
   autoHeight: function() {
@@ -124,7 +116,7 @@ jQuery.fn.extend({
   }
 });
 
-
+// Count likes in comment
 function likeComentario() {
 
   var contador = $(this).siblings('.likeCount');
@@ -141,6 +133,7 @@ function likeComentario() {
   }
 }
 
+// Count dislikes in comment
 function dislikeComentario() {
 
   var contador = $(this).siblings('.dislikeCount');
@@ -155,4 +148,16 @@ function dislikeComentario() {
     $(contador).text(total);
     $(this).addClass('dislike');
   }
+}
+
+//count comments
+function contadorComentarios() {
+
+  var total = document.getElementsByTagName('article').length;
+  $('.count-comments').text(++total);
+}
+
+//check if input has white space or empty string
+function isWhitespaceNotEmpty(text) {
+  return text.length > 0 && !/[^\s]/.test(text);
 }
