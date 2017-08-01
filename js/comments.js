@@ -5,7 +5,7 @@ $(function() {
   $(document).on("click", ".sendReply", enviarReply);
   $(document).on("click", ".reply", replyAtivado);
   $(document).on("click", ".fa-thumbs-up", likeComentario);
-
+  $(document).on("click", ".fa-thumbs-down", dislikeComentario);
   $(document).change(contadorComentarios);
 });
 
@@ -71,7 +71,8 @@ function montarComentario(user, texto) {
               <div class="response">
 
               <a class="reply">Reply</a>
-              <i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="count">0</span>
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="likeCount">0</span>
+              <i class="fa fa-thumbs-down" aria-hidden="true"></i><span class="dislikeCount">0</span>
 
               <div class="reply-a-comment hidden">
                 <textarea class="reply-comment" rows="8" cols="80" placeholder="Reply this comment"></textarea>
@@ -126,16 +127,32 @@ jQuery.fn.extend({
 
 function likeComentario() {
 
-  var contador = $(this).siblings('.count');
-  var totalLikes = contador.text();
+  var contador = $(this).siblings('.likeCount');
+  var total = contador.text();
 
   if ($(this).hasClass('like')) {
-    totalLikes = parseInt(--totalLikes);
-    $(contador).text(totalLikes);
+    total = parseInt(--total);
+    $(contador).text(total);
     $(this).removeClass('like');
   } else {
-    totalLikes = parseInt(++totalLikes);
-    $(contador).text(totalLikes);
+    total = parseInt(++total);
+    $(contador).text(total);
     $(this).addClass('like');
+  }
+}
+
+function dislikeComentario() {
+
+  var contador = $(this).siblings('.dislikeCount');
+  var total = contador.text();
+
+  if ($(this).hasClass('dislike')) {
+    total = parseInt(--total);
+    $(contador).text(total);
+    $(this).removeClass('dislike');
+  } else {
+    total = parseInt(++total);
+    $(contador).text(total);
+    $(this).addClass('dislike');
   }
 }
